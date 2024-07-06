@@ -1,0 +1,6 @@
+.dts/
+
+_develop/
+
+dist/
+node_modules/
