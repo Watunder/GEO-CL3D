@@ -1,0 +1,22 @@
+{
+  "name": "coherent-gameface-rangeslider",
+  "version": "3.3.1",
+  "description": "A component for Coherent Labs Gameface.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoherentLabs/GameUIComponents/tree/master/components/rangeslider"
+  },
+  "keywords": [
+    "Range slider",
+    "UI",
+    "Component"
+  ],
+  "dependencies": {
+    "coherent-gameface-components": "^3.0.0",
+    "postmessage-polyfill": "1.0.0",
+    "whatwg-fetch": "3.4.1"
+  },
+  "author": "CoherentLabs",
+  "license": "ISC"
+}

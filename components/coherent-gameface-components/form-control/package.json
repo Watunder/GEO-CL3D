@@ -1,0 +1,30 @@
+{
+  "name": "coherent-gameface-form-control",
+  "version": "3.1.0",
+  "description": "A component for Coherent Labs Gameface.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoherentLabs/GameUIComponents/tree/master/components/gameface-form-control"
+  },
+  "keywords": [
+    "UI",
+    "Component",
+    "Form"
+  ],
+  "dependencies": {
+    "coherent-gameface-components": "^3.0.0",
+    "coherent-gameface-checkbox": "^3.0.0",
+    "coherent-gameface-radio-button": "^3.0.0",
+    "coherent-gameface-switch": "^3.0.0",
+    "coherent-gameface-rangeslider": "^3.0.0",
+    "coherent-gameface-dropdown": "^3.0.0",
+    "postmessage-polyfill": "1.0.0",
+    "url-search-params-polyfill": "^8.1.1",
+    "coherent-gameface-tooltip": "^3.0.0",
+    "coherent-gameface-text-field": "^3.0.0",
+    "whatwg-fetch": "3.4.1"
+  },
+  "author": "CoherentLabs",
+  "license": "ISC"
+}
