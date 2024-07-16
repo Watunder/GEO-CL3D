@@ -4,8 +4,4 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-if (process.env.NODE_ENV === 'production') {
-    module.exports = require('./dist/text-field.production.min.js');
-} else {
-    module.exports = require('./dist/text-field.development.js');
-}
+export * from "./script.js";
