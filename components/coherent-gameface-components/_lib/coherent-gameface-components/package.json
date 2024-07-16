@@ -1,0 +1,23 @@
+{
+  "name": "coherent-gameface-components",
+  "version": "3.3.0",
+  "type": "module",
+  "description": "A UI components library for the Web.",
+  "main": "components.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoherentLabs/GameUIComponents.git"
+  },
+  "keywords": [
+    "components"
+  ],
+  "author": "CoherentLabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoherentLabs/GameUIComponents/issues"
+  },
+  "homepage": "https://github.com/CoherentLabs/GameUIComponents#readme"
+}
