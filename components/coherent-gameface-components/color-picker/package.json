@@ -12,9 +12,9 @@
         "Component"
     ],
     "dependencies": {
-        "coherent-gameface-components": "^3.0.1",
-        "coherent-gameface-rangeslider": "^3.3.0",
-        "coherent-gameface-tooltip": "^3.1.0",
+        "coherent-gameface-components": "workspace:*",
+        "coherent-gameface-rangeslider": "workspace:*",
+        "coherent-gameface-tooltip": "workspace:*",
         "colortranslator": "4.1.0",
         "postmessage-polyfill": "1.0.0",
         "whatwg-fetch": "3.4.1"

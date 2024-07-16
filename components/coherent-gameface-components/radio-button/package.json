@@ -12,7 +12,7 @@
     "Component"
   ],
   "dependencies": {
-    "coherent-gameface-components": "^3.0.0",
+    "coherent-gameface-components": "workspace:*",
     "postmessage-polyfill": "1.0.0",
     "whatwg-fetch": "3.4.1"
   },
