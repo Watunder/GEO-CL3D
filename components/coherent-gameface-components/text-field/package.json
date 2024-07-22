@@ -13,9 +13,7 @@
     "Text field"
   ],
   "dependencies": {
-    "coherent-gameface-components": "workspace:*",
-    "postmessage-polyfill": "1.0.0",
-    "whatwg-fetch": "3.4.1"
+    "coherent-gameface-components": "workspace:*"
   },
   "author": "CoherentLabs",
   "license": "ISC"

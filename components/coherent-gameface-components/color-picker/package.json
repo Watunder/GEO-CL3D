@@ -15,9 +15,7 @@
         "coherent-gameface-components": "workspace:*",
         "coherent-gameface-rangeslider": "workspace:*",
         "coherent-gameface-tooltip": "workspace:*",
-        "colortranslator": "4.1.0",
-        "postmessage-polyfill": "1.0.0",
-        "whatwg-fetch": "3.4.1"
+        "colortranslator": "4.1.0"
     },
     "devDependencies": {
         "html-loader": "^4.2.0"

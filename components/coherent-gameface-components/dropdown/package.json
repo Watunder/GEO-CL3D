@@ -14,9 +14,7 @@
   ],
   "dependencies": {
     "coherent-gameface-components": "workspace:*",
-    "coherent-gameface-scrollable-container": "workspace:*",
-    "postmessage-polyfill": "1.0.0",
-    "whatwg-fetch": "3.4.1"
+    "coherent-gameface-scrollable-container": "workspace:*"
   },
   "author": "CoherentLabs",
   "license": "ISC"
