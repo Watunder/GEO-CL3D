@@ -2,7 +2,12 @@
     "type": "module",
     "dependencies": {
         "@loaders.gl/core": "^4.2.2",
-        "@loaders.gl/gltf": "^4.2.2",
-        "ffmpeg-static": "^5.2.0"
+        "@loaders.gl/gltf": "^4.2.2"
+    },
+    "devDependencies": {
+        "@rollup/plugin-multi-entry": "^6.0.1",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "rollup-plugin-inline-string": "^0.0.4",
+        "rollup-plugin-input-with-css": "^1.0.1"
     }
 }

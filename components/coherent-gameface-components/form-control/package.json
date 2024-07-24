@@ -19,7 +19,6 @@
     "coherent-gameface-switch": "workspace:*",
     "coherent-gameface-rangeslider": "workspace:*",
     "coherent-gameface-dropdown": "workspace:*",
-    "postmessage-polyfill": "1.0.0",
     "url-search-params-polyfill": "^8.1.1",
     "coherent-gameface-tooltip": "workspace:*",
     "coherent-gameface-text-field": "workspace:*"
