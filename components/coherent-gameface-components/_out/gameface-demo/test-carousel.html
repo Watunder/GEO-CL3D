@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        #box0 {
+            background-color: rgb(170, 215, 255);
+        }
+
+        #box1 {
+            background-color: rgb(51, 162, 240);
+        }
+
+        #box2 {
+            background-color: rgb(159, 235, 152);
+        }
+
+        #box3 {
+            background-color: rgb(255, 243, 154);
+        }
+
+        #box4 {
+            background-color: rgb(246, 230, 7);
+        }
+
+        #box5 {
+            background-color: rgb(246, 173, 136);
+        }
+
+        #box6 {
+            background-color: rgb(254, 103, 9);
+        }
+
+        #box7 {
+            background-color: rgb(149, 254, 200);
+        }
+
+        #box8 {
+            background-color: rgb(142, 251, 157);
+        }
+    </style>
+</head>
+
+<body>
+    <gameface-carousel class="carousel-component">
+        <div slot="carousel-content" class="box" id="box0">0</div>
+        <div slot="carousel-content" class="box" id="box1">1</div>
+        <div slot="carousel-content" class="box" id="box2">2</div>
+        <div slot="carousel-content" class="box" id="box3">3</div>
+        <div slot="carousel-content" class="box" id="box4">4</div>
+        <div slot="carousel-content" class="box" id="box5">5</div>
+        <div slot="carousel-content" class="box" id="box6">6</div>
+        <div slot="carousel-content" class="box" id="box7">7</div>
+    </gameface-carousel>
+
+    <button id="add">Add Element</button>
+    <button id="remove">Remove Element</button>
+    Page Size: <input id="change_page" placeholder="update page size" />
+    <p id="log">No Logs!</p>
+</body>
+
+<script>
+    function getRandomArbitrary(a, b) {
+        return Math.random() * (b - a) + a;
+    }
+
+    const logParagraph = document.querySelector('#log');
+
+    document.querySelector('#add').addEventListener('click', () => {
+        let a = document.createElement('div');
+        const b = document.querySelectorAll('.box').length;
+        a.textContent = b;
+        a.id = `box${b}`;
+        a.classList.add('box');
+        a.style.backgroundColor = `rgba(${getRandomArbitrary(0, 255)}, ${getRandomArbitrary(0, 255)}, ${getRandomArbitrary(0, 255)}, 1)`;
+        document.querySelector('gameface-carousel').addItem(a);
+        logParagraph.textContent = `Added Element at ${b} position.`;
+    });
+
+    document.querySelector('#remove').addEventListener('click', () => {
+        const a = document.querySelectorAll('.box');
+        c = a.length;
+        b = c - 1;
+        d = a[b];
+        e = d.textContent;
+        document.querySelector('gameface-carousel').removeItem(b), logParagraph.textContent = `Removed Element with number ${e}.`;
+    });
+
+    document.querySelector('#change_page').addEventListener('change', a => {
+        document.querySelector('gameface-carousel').pageSize = Math.floor(a.currentTarget.value);
+    });
+</script>
+
+<script type="module" src="../gameface-style/css-coherent-gameface-components-theme.js"></script>
+<script type="module" src="../gameface-style/css-carousel-style-44.js"></script>
+<script type="module" src="../gameface/carousel.js"></script>
+
+</html>

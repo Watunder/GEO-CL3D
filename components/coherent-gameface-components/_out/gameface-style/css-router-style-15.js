@@ -1,0 +1,3 @@
+var styleText = "/*--------------------------------------------------------------------------------------------- *  Copyright (c) Coherent Labs AD. All rights reserved. *  Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/gameface-route{cursor:pointer;margin-left:10px;}gameface-route:hover{color:var(--default-color-blue);}.guic-route-active{color:var(--default-color-blue);}";
+
+let style = document.createElement("style");style.innerHTML = styleText;document.head.appendChild(style);

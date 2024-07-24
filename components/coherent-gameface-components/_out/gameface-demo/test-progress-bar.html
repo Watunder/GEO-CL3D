@@ -1,0 +1,150 @@
+<!--Copyright (c) Coherent Labs AD. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 3vh;
+        }
+
+        .progress-bar-wrapper-one,
+        .progress-bar-wrapper-two,
+        .progress-bar-wrapper-three,
+        .progress-bar-wrapper-four,
+        .progress-bar-wrapper-five {
+            width: 100%;
+            height: 15px;
+        }
+
+        .grid {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            margin: 50px;
+        }
+
+        .controls {
+            height: 30px;
+            align-content: space-around;
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .controls button {
+            margin-left: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body class="guic-demo">
+
+    <div class="grid">
+        <div class="row">
+            <div class="progress-bar-wrapper-one">
+                <div>0% -> 100% with 2000ms animation duration.</div>
+                <gameface-progress-bar id="progress-bar-one" animation-duration="2000">
+                </gameface-progress-bar>
+            </div>
+        </div>
+        <div class="row">
+            <div class="progress-bar-wrapper-two">
+                <div>0% -> 100% with no animation.</div>
+                <gameface-progress-bar id="progress-bar-two">
+                </gameface-progress-bar>
+            </div>
+        </div>
+        <div class="row">
+            <div class="progress-bar-wrapper-three">
+                <div>Random progress set on random interval between 250 and 750 ms with 1000ms animation duration.</div>
+                <gameface-progress-bar id="progress-bar-three" animation-duration="1000">
+                </gameface-progress-bar>
+            </div>
+        </div>
+        <div class="row">
+            <div class="progress-bar-wrapper-four">
+                <div>Animation duration set using the animation-duration property</div>
+                <gameface-progress-bar id="progress-bar-four" target-value="40" animation-duration="1000">
+                </gameface-progress-bar>
+                <div class="controls">
+                    <input type="text" class="anim-duration-input"> <button class="update-anim-duration">Update
+                        animation-duration</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="progress-bar-wrapper-five">
+                <div>Target value set using the target-value attribute - 60%</div>
+                <gameface-progress-bar id="progress-bar-five" animation-duration="1000" target-value="60">
+                </gameface-progress-bar>
+                <div class="controls">
+                    <input type="text" class="target-value-input"> <button class="update-target-value">Update
+                        target-value</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const progressBarOne = document.getElementById('progress-bar-one');
+    progressBarOne.animDuration = 5e3;
+    progressBarOne.targetValue = 100;
+
+    function getRandomInt(a, b) {
+        return a = Math.ceil(a), b = Math.floor(b), Math.floor(Math.random() * (b - a) + a);
+    }
+
+    const progressBarTwo = document.getElementById('progress-bar-two');
+    let progressBarTwoValue = 0;
+
+    setInterval(() => {
+        progressBarTwoValue < 100 ? progressBarTwoValue += 2 : progressBarTwoValue = 0;
+        progressBarTwo.targetValue = progressBarTwoValue;
+    }, 100);
+
+    const progressBarThree = document.getElementById('progress-bar-three');
+
+    setInterval(() => {
+        progressBarThree.targetValue = getRandomInt(0, 100);
+    }, getRandomInt(250, 750));
+
+    const progressBarFour = document.getElementById('progress-bar-four');
+    const updateAnimDurationAttrButton = document.querySelector('.update-anim-duration');
+    const animDurationInput = document.querySelector('.anim-duration-input');
+
+    updateAnimDurationAttrButton.addEventListener('click', () => {
+        progressBarFour.setAttribute('animation-duration', animDurationInput.value);
+    });
+    animDurationInput.addEventListener('keydown', a => {
+        a.keyCode === 13 && progressBarFour.setAttribute('animation-duration', a.currentTarget.value);
+    });
+
+    const progressBarFive = document.getElementById('progress-bar-five');
+    const updateTargetValueAttrButton = document.querySelector('.update-target-value');
+    const targetValueInput = document.querySelector('.target-value-input');
+
+    updateTargetValueAttrButton.addEventListener('click', () => {
+        progressBarFive.setAttribute('target-value', targetValueInput.value);
+    });
+    targetValueInput.addEventListener('keydown', a => {
+        a.keyCode === 13 && progressBarFive.setAttribute('target-value', a.currentTarget.value);
+    });
+</script>
+
+<script type="module" src="../gameface-style/css-coherent-gameface-components-theme.js"></script>
+<script type="module" src="../gameface-style/css-progress-bar-style-25.js"></script>
+<script type="module" src="../gameface/progress-bar.js"></script>
+
+</html>

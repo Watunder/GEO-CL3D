@@ -1,0 +1,3 @@
+var styleText = "/*--------------------------------------------------------------------------------------------- *  Copyright (c) Coherent Labs AD. All rights reserved. *  Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/gameface-bottom-menu{position:absolute;bottom:0px;display:flex;flex-direction:row;}";
+
+let style = document.createElement("style");style.innerHTML = styleText;document.head.appendChild(style);

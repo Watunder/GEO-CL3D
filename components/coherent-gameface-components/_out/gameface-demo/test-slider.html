@@ -1,0 +1,42 @@
+<!--Copyright (c) Coherent Labs AD. All rights reserved. Licensed under the MIT License. See License.txt in the project root for license information. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .avatar {
+            width: 30vh;
+            height: 40vh;
+            background-size: contain;
+            background-repeat: no-repeat no-repeat;
+            background-image: url(images/avatar.png);
+        }
+    </style>
+</head>
+
+<body class="guic-demo">
+    <div class="slider-container">
+        <h3 class="blur-text">Blur: 0</h3>
+        <div class="flex-container">
+            <gameface-slider class="vertical-slider-component" orientation="vertical"></gameface-slider>
+            <div class="avatar"></div>
+        </div>
+    </div>
+    <div class="slider-container">
+        <gameface-slider class="horizontal-slider-component" orientation="horizontal"></gameface-slider>
+        <h3 class="rotate-text">Hue Rotate: 0</h3>
+    </div>
+</body>
+
+<script type="module" src="../gameface-style/css-coherent-gameface-components-theme.js"></script>
+<script type="module" src="../gameface-style/css-slider-horizontal-12.js"></script>
+<script type="module" src="../gameface-style/css-slider-vertical-11.js"></script>
+<script type="module" src="../gameface/slider.js"></script>
+<script type="module" src="./scripts/slider-main.js"></script>
+<script type="module" src="./scripts/slider-css.js"></script>
+
+</html>

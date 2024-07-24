@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .color-picker-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7vh;
+            height: 7vh;
+        }
+
+        .color-preview {
+            width: 5.5vh;
+            height: 5.5vh;
+            border-radius: 1vh;
+            background-color:black;
+        }
+
+        gameface-tooltip {
+            background-color: transparent;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <gameface-color-picker class="color-picker-component"></gameface-color-picker>
+    <h2>Using the color picker with the coherent-gameface-tooltip</h2>
+    <div class="color-picker-button">
+        <div class="color-preview"></div>
+    </div>
+    <gameface-tooltip id="tutorial" target=".color-picker-button" on="click" position="right" off="click">
+        <div slot="message">
+            <gameface-color-picker id="tooltip-color-picker"></gameface-color-picker>
+        </div>
+    </gameface-tooltip>
+</body>
+
+<script type="module" src="../gameface-style/css-coherent-gameface-components-theme.js"></script>
+<script type="module" src="../gameface-style/css-color-picker-style-40.js"></script>
+<script type="module" src="../gameface-style/css-rangeslider-horizontal-19.js"></script>
+<script type="module" src="../gameface-style/css-tooltip-style-0.js"></script>
+<script type="module" src="../gameface/color-picker.js"></script>
+<script type="module" src="../gameface/tooltip.js"></script>
+
+</html>
