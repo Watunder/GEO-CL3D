@@ -7,7 +7,7 @@ gameface-tooltip {
     position: absolute;
     visibility: hidden;
     background-color: var(--default-color-blue);
-    width: 150px;
+    /* width: 150px; */
     padding: 10px;
     border-radius: 10px;
     overflow-wrap: break-word;
