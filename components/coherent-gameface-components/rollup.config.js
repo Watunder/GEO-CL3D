@@ -81,7 +81,7 @@ export default [
     {
         input: Object.fromEntries(
             globSync('./**/*.css', { ignore: './**/node_modules/**' }).map((file, index) => {
-                let name = `css-${file.slice(0, file.indexOf('\\'))}-${path.basename(file, '.css')}-${index}`
+                let name = `css-${file.slice(0, file.indexOf('\\'))}-${path.basename(file, '.css')}`
                 if (path.basename(file) == 'coherent-gameface-components-theme.css')
                     name = 'css-coherent-gameface-components-theme';
                 return [
