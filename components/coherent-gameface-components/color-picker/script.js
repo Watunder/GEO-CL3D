@@ -286,8 +286,15 @@ class ColorPicker extends BaseComponent {
      * Updates the handle position based on the handle values
      */
     updateHandleStyle() {
-        this.lsPickerAttributeStyleMap.set('top', CSS.percent(this.pickerCoords.y));
-        this.lsPickerAttributeStyleMap.set('left', CSS.percent(this.pickerCoords.x));
+        if (this.lsPickerAttributeStyleMap) {
+            this.lsPickerAttributeStyleMap.set('top', CSS.percent(this.pickerCoords.y));
+            this.lsPickerAttributeStyleMap.set('left', CSS.percent(this.pickerCoords.x));
+        }
+        else {
+            // https://bugzilla.mozilla.org/show_bug.cgi?id=1278697
+            this.lsPickerHandle.style.top = `${this.pickerCoords.y}%`;
+            this.lsPickerHandle.style.left = `${this.pickerCoords.x}%`;
+        }
 
         this.lsPickerHandle.style.backgroundColor = hslaToHexAndRGB(this.hsla).rgba;
     }
