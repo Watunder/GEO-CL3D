@@ -1,0 +1,4 @@
+class X3DComponent {
+
+};
+
