@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <fps-counter delay="1000"></fps-counter>
+</body>
+
+<script type="module">
+    import { updateFPSCounter } from "../common/fps-counter.js";
+
+    const interval = 1000 / 60;
+
+    let lastUpdate = performance.now();
+    const running = (now) => {
+        let elapsed = now - lastUpdate;
+        requestAnimationFrame(running);
+
+        if (elapsed >= interval) {
+            updateFPSCounter();
+
+            lastUpdate = now - (elapsed % interval);
+        }
+    };
+    requestAnimationFrame(running);
+</script>
+
+</html>
