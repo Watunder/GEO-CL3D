@@ -1,0 +1,12 @@
+fps-counter {
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    z-index: 999;
+    color: white;
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none;
+    -webkit-text-stroke: 1px black;
+}
