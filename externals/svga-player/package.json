@@ -1,0 +1,10 @@
+{
+    "type": "module",
+    "name": "svga-player",
+    "main": "./dist/svga-player.js",
+    "typings": "./dist/types/index.d.ts",
+    "dependencies": {
+        "pako": "^2.1.0",
+        "pbf": "^4.0.1"
+    }
+}
