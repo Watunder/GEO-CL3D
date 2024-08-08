@@ -30,6 +30,12 @@ importers:
 
   components/cl3d-gamecontrol-components/_lib/x3d-components: {}
 
+  components/cl3d-gamelayout-components/_lib/flexbox:
+    devDependencies:
+      yoga-layout:
+        specifier: ^3.1.0
+        version: 3.1.0
+
   components/coherent-gameface-components/_lib/coherent-gameface-components: {}
 
   components/coherent-gameface-components/_lib/interaction-manager: {}
@@ -1015,6 +1021,9 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
+  yoga-layout@3.1.0:
+    resolution: {integrity: sha512-auzJ8lEovThZIpR8wLGWNo/JEj4VTO79q9/gOJ0dWb3shAYPFdX3t9VN0fC0v+jeQF77STUdCzebLwRMqzn5gQ==}
+
 snapshots:
 
   '@jridgewell/gen-mapping@0.3.5':
@@ -1800,3 +1809,5 @@ snapshots:
       - uglify-js
 
   wrappy@1.0.2: {}
+
+  yoga-layout@3.1.0: {}
