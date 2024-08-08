@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "yoga-layout": "^3.1.0"
+  }
+}
